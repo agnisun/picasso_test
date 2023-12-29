@@ -4,11 +4,13 @@ import * as path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/picasso_test/',
   plugins: [react()],
   server: {
     port: 3000,
     strictPort: true,
+  },
+  build: {
+    outDir: 'build'
   },
   resolve: {
     alias: {

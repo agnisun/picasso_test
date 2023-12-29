@@ -10,7 +10,7 @@ export function View() {
 
     if (error) {
         navigate('/', { replace: true })
-        return
+        return null
     }
 
     return (

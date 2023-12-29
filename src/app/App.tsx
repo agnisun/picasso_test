@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import { withProviders } from './providers'
 import { Home } from '@pages/home'
 import { Post } from '@pages/post'
@@ -11,7 +11,7 @@ export const App = withProviders(function () {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/post/:id" element={<Post />} />
-                <Route path="*" element={<Navigate to={'/'} />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
         </BrowserRouter>
     )
